@@ -30,7 +30,7 @@
         {
             "nombre": "contigo",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "escuchas": 50,,
+            "escuchas": 50,
             "icono": 4,
 			"tipo_archivo": "mpeg"
         },
