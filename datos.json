@@ -3,62 +3,62 @@
             "nombre": "Paisaranda",
 			"ruta":"https://sonic.cloudstreaming.eu/8096/stream",
             "icono": 4,
-			"escuchas": 2,
+			"escuchas": 50,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "Radio Policía medellín",
             "ruta": "https://radio35.virtualtronics.com/proxy/radiopolicia964?mp=/stream",
             "icono": 1,
-			"escuchas": 2,
-			"tipo_archivo": "mpeg"
-        },
-        {
-            "nombre": "La Bakana 103.1 Buga",
-            "ruta": "https://radio35.virtualtronics.com/proxy/labakana?mp=/stream",
-            "icono": 3,
-			"escuchas": 2,
+			"escuchas": 50,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "suave",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "reproducciones": 20,
+            "escuchas": 50,
             "icono": 2,
+			"tipo_archivo": "mpeg"
+        },
+		{
+            "nombre": "La Bakana 103.1 Buga",
+            "ruta": "https://radio35.virtualtronics.com/proxy/labakana?mp=/stream",
+            "icono": 3,
+			"escuchas": 50,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "contigo",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "reproducciones": 50,
+            "escuchas": 50,,
             "icono": 4,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "alas",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "reproducciones": 25,
+            "escuchas": 50,
             "icono": 1,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "verde",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "reproducciones": 60,
+            "escuchas": 50,
             "icono": 3,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "nuevamente",
             "ruta": "https://radio35.virtualtronics.com/proxy/radiopolicia964?mp=/stream",
-            "reproducciones": 29,
+            "escuchas": 50,
             "icono": 1,
 			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "hoy",
             "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
-            "reproducciones": 85,
+            "escuchas": 50,
             "icono": 2,
 			"tipo_archivo": "mpeg"
         }
