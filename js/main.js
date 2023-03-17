@@ -6,8 +6,8 @@ function loadSongs() {
         var lastAudio = null; // Agregar una variable para almacenar el último elemento de audio reproducido
 
         $.each(data.emisoras, function(_key, value) {
-            output += '<div class="">';
-            output += '<div class="m-2" style="border: 1px solid #dadada;">';
+            output += '<div style="max-width: 205px">';
+            output += '<div class="m-2" style="border: 1px solid #dadada; width: 200px; border-radius: 10px">';
             output += '<div class="row m-0" style="background-color: #e2e2e2ad;">';
             output += '<img src="img/icon_' + value.icono + '.svg" width="25%" height="25%" class="d-inline-block mx-auto my-3" alt="Oye">';
             output += '</div>';
@@ -15,7 +15,7 @@ function loadSongs() {
             output += '<p class="mx-auto mt-3 mb-1"><b>' + value.nombre + '</b></p>';
             output += '</div>';
             output += '<div class="row m-0" style="background-color: #f8f9fa;">';
-            output += '<audio class="mx-auto my-3" controls="">';
+            output += '<audio class="mx-auto my-2 emisora-audio" controls style="max-width: 95%">';
             output += '<source src="' + value.ruta + '" type="audio/' + value.tipo_archivo + '">';
             output += '</audio>';
             output += '</div>';
@@ -24,7 +24,7 @@ function loadSongs() {
             $('#filter-records').html(output);
 
             // Agregar controlador de eventos al elemento de audio
-            $('audio').last().on('play', function() {
+            $('.emisora-audio').last().on('play', function() {
                 // Obtener el id de la emisora actual
                 var currentId = $(this).parent().prev().find('img').attr('src').split('_')[1].split('.')[0];
 
@@ -42,6 +42,7 @@ function loadSongs() {
         fillFlex(arrayLenght);
     })
 }
+
 
 
 
