@@ -1,57 +1,66 @@
 {
-    "canciones": [{
-            "nombre": "vive",
-            "ruta": "uno.mp3",
-            "reproducciones": 10,
-            "icono": 4
+    "emisoras": [{
+            "nombre": "Paisaranda",
+			"ruta":"https://sonic.cloudstreaming.eu/8096/stream",
+            "icono": 4,
+			"escuchas": 2,
+			"tipo_archivo": "mpeg"
         },
         {
-            "nombre": "invierno",
-            "ruta": "dos.mp3",
-            "reproducciones": 70,
-            "icono": 1
+            "nombre": "Radio Policía medellín",
+            "ruta": "https://radio35.virtualtronics.com/proxy/radiopolicia964?mp=/stream",
+            "icono": 1,
+			"escuchas": 2,
+			"tipo_archivo": "mpeg"
         },
         {
-            "nombre": "planeta",
-            "ruta": "tres.mp3",
-            "reproducciones": 20,
-            "icono": 3
+            "nombre": "La Bakana 103.1 Buga",
+            "ruta": "https://radio35.virtualtronics.com/proxy/labakana?mp=/stream",
+            "icono": 3,
+			"escuchas": 2,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "suave",
-            "ruta": "cuatro.mp3",
+            "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
             "reproducciones": 20,
-            "icono": 2
+            "icono": 2,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "contigo",
-            "ruta": "cinco.mp3",
+            "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
             "reproducciones": 50,
-            "icono": 4
+            "icono": 4,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "alas",
-            "ruta": "seis.mp3",
+            "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
             "reproducciones": 25,
-            "icono": 1
+            "icono": 1,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "verde",
-            "ruta": "siete.mp3",
+            "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
             "reproducciones": 60,
-            "icono": 3
+            "icono": 3,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "nuevamente",
-            "ruta": "ocho.mp3",
+            "ruta": "https://radio35.virtualtronics.com/proxy/radiopolicia964?mp=/stream",
             "reproducciones": 29,
-            "icono": 1
+            "icono": 1,
+			"tipo_archivo": "mpeg"
         },
         {
             "nombre": "hoy",
-            "ruta": "nueve.mp3",
+            "ruta": "https://sonic.cloudstreaming.eu/8096/stream",
             "reproducciones": 85,
-            "icono": 2
+            "icono": 2,
+			"tipo_archivo": "mpeg"
         }
     ]
 }

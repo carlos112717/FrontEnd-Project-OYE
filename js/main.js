@@ -1,10 +1,11 @@
-/* cargar datos */
-
 function loadSongs() {
     var output = '';
     $.getJSON('./datos.json', function(data) {
-        var arrayLenght = Object.keys(data.canciones).length;
-        $.each(data.canciones, function(key, value) {
+        var arrayLenght = Object.keys(data.emisoras).length;
+        var lastPlayed = null;
+        var lastAudio = null; // Agregar una variable para almacenar el último elemento de audio reproducido
+
+        $.each(data.emisoras, function(_key, value) {
             output += '<div class="">';
             output += '<div class="m-2" style="border: 1px solid #dadada;">';
             output += '<div class="row m-0" style="background-color: #e2e2e2ad;">';
@@ -15,16 +16,34 @@ function loadSongs() {
             output += '</div>';
             output += '<div class="row m-0" style="background-color: #f8f9fa;">';
             output += '<audio class="mx-auto my-3" controls="">';
-            output += '<source src="canciones/' + value.ruta + '" type="audio/mp3">';
+            output += '<source src="' + value.ruta + '" type="audio/' + value.tipo_archivo + '">';
             output += '</audio>';
             output += '</div>';
             output += '</div>';
             output += '</div>';
             $('#filter-records').html(output);
+
+            // Agregar controlador de eventos al elemento de audio
+            $('audio').last().on('play', function() {
+                // Obtener el id de la emisora actual
+                var currentId = $(this).parent().prev().find('img').attr('src').split('_')[1].split('.')[0];
+
+                // Verificar si la emisora actual es diferente a la última emisora reproducida
+                if (lastPlayed != null && currentId != lastPlayed) {
+                    // Pausar la última emisora reproducida
+                    lastAudio.pause(); // Detener la reproducción de la última emisora reproducida
+                }
+
+                // Actualizar la última emisora reproducida y el último elemento de audio
+                lastPlayed = currentId;
+                lastAudio = this; // Almacenar el elemento de audio actual como el último reproducido
+            });
         });
         fillFlex(arrayLenght);
     })
 }
+
+
 
 /*filtra  las canciones */
 
@@ -65,6 +84,20 @@ function fillFlex(value) {
 /* carga todas las canciones en canciones */
 
 loadSongs();
+
+
+/* función top 3 del index */
+
+function loadTop3() {
+    $.getJSON('./datos.json', function(data) {
+        var topEmisoras = data.emisoras.sort((a, b) => b.escuchas - a.escuchas).slice(0, 3);
+        for (var i = 0; i < topEmisoras.length; i++) {
+            document.getElementById("top" + (i + 1)).innerHTML = topEmisoras[i].nombre;
+            document.getElementById("audio" + (i + 1)).setAttribute("src", topEmisoras[i].url)
+        }
+    });
+}
+
 
 /* limpia el focus luego de cerrar la ventana modal */
 
