@@ -89,14 +89,23 @@ loadSongs();
 /* función top 3 del index */
 
 function loadTop3() {
+    var minEscuchas = 20; // número mínimo de escuchas necesarias para aparecer en el Top 3
     $.getJSON('./datos.json', function(data) {
-        var topEmisoras = data.emisoras.sort((a, b) => b.escuchas - a.escuchas).slice(0, 3);
-        for (var i = 0; i < topEmisoras.length; i++) {
-            document.getElementById("top" + (i + 1)).innerHTML = topEmisoras[i].nombre;
-            document.getElementById("audio" + (i + 1)).setAttribute("src", topEmisoras[i].url)
+        var topValues = data.emisoras.sort((a, b) => b.escuchas - a.escuchas).slice(0, 3);
+        for (var x = 1; x < 4; x++) {
+            document.getElementById("top" + x).innerHTML = topValues[x - 1].nombre;
+            document.getElementById("audio" + x).setAttribute("src", "./" + topValues[x - 1].ruta);
+			document.getElementById("img" + x).setAttribute("src", "./" + topValues[x - 1].imagen);
+
+        }
+        if (topValues.some(emisora => emisora.escuchas >= minEscuchas)) {
+            document.getElementById("top3-section").classList.remove("hidden");
+        } else {
+            document.getElementById("top3-section").classList.add("hidden");
         }
     });
 }
+
 
 
 /* limpia el focus luego de cerrar la ventana modal */

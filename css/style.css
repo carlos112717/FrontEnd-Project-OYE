@@ -42,6 +42,13 @@ audio::-webkit-media-controls-enclosure {
 }
 
 
+.hidden {
+    display: none;
+}
+
+
+
+
 /**media querys para Canciones  **/
 
 @media (min-width: 992px) {
